@@ -90,3 +90,18 @@ def summer_69(ar):
 print(summer_69([4, 5, 6, 7, 8, 9]))
 print(summer_69([2, 1, 6, 9, 11]))
 
+# try except
+def ask_for_int():
+    while True:
+        try:
+            num = int(input("Enter a number: "))
+        except:
+            print("This is not a number")
+            continue
+        else:
+            print("Well done! Thank u")
+            break
+        finally:
+            print("Like i will always run")
+
+ask_for_int()
