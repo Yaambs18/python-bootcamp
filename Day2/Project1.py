@@ -34,9 +34,9 @@ def win_check(board,mark):
 
 def player_selection():
     if random.randint(0, 1) == 0:
-        return 'Player 2'
-    else:
         return 'Player 1'
+    else:
+        return 'Player 2'
 
 def space_check(board, position):
     return board[position] == ' '
