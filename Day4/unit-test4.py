@@ -1,7 +1,7 @@
 import unittest
 import line_class
 
-class TestCap(unittest.TestCase):
+class Test_Dist_slope(unittest.TestCase):
     def test_distance(self):
         coordinate1 = (3,2)
         coordinate2 = (8,10)
