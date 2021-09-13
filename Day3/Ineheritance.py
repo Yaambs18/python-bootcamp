@@ -26,7 +26,7 @@ class GrandChild(Child):
 	def getAddress(self):
 		return self.address		
 
-m = GrandChild("Geek1", 23, "Noida")
+m = GrandChild("Yansh", 1, "Aligarh")
 print(m.getName(), m.getAge(), m.getAddress())
 
 
