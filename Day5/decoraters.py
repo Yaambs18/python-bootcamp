@@ -1,16 +1,17 @@
-import time
-def calculate_time(fun):
-    
-    def wraper():
-        t1 = time.time()
-        fun()
-        t2 = time.time()
-        print(t2 -t1)
-    return wraper
+from functools import wraps
 
-@calculate_time
-def fun():
-    for i in range(20):
-        print(i, end=' ')
-    
-fun()
+def only_int_allow(function):
+    @wraps(function)
+    def wrapper(*args, **kwargs):
+        if all([type(arg) == int for arg in args]):
+            return function(*args, **kwargs)
+        print("Invalid Argument")
+    return wrapper
+
+@only_int_allow
+def add_all(*args):
+    total = 0
+    for arg in args:
+        total += arg
+    return total
+add_all(1,2,3,4,5)
