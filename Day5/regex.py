@@ -25,3 +25,13 @@ print(result.group())
 print(result.group(1))
 print(result.span())
 print(result.group(2))
+
+
+
+
+num_text = "there are 3 numbers. but i don't have 45 numbers, can i ask for 3 numbers?"
+
+pat = re.findall(r"[^\d]+",num_text)
+pat1 = re.findall(r"[\d]+",num_text)
+print(pat)
+print(pat1)
