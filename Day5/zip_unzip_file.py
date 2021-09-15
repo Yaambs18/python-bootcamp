@@ -25,3 +25,4 @@ dir_to_zip = '/home/yaambs18/Desktop/extracted_file'
 new_zip_file = "shutil_zip"
 
 shutil.make_archive(new_zip_file, 'zip', dir_to_zip)
+shutil.unpack_archive('shutil_zip.zip','new unzip shutil','zip')
