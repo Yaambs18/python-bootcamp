@@ -12,9 +12,9 @@ product_year = soup.select('.team-card__wins')
 win_year = []
 j = 0
 i = 0
-while j < 8:
+while j < len(product_title):
     if product_card[j].find('div'):
-        if i<5:
+        if i<len(product_year):
             win_year.append(product_year[i].get_text().strip())
             i+=1
         j+=1
@@ -31,9 +31,9 @@ for i in range(8):
     team_data_dictionary[f'{i+1}']['winning_year'] = win_year[i]
 
 
-fields = ['S.no', 'title', 'venue', 'winning_year']
-with open("movies_data.csv", "w") as csvfile:
-            writer = csv.DictWriter(csvfile, fields)
-            writer.writeheader()
-            for key in team_data_dictionary:
-                writer.writerow({field: team_data_dictionary[key].get(field) or key for field in fields})
+# fields = ['S.no', 'title', 'venue', 'winning_year']
+# with open("movies_data.csv", "w") as csvfile:
+#             writer = csv.DictWriter(csvfile, fields)
+#             writer.writeheader()
+#             for key in team_data_dictionary:
+#                 writer.writerow({field: team_data_dictionary[key].get(field) or key for field in fields})
